@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    font-size: 1.4rem;
+}
 html, body, input {
     font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
     font-weight: 500;
@@ -109,7 +112,7 @@ li {
 #bf-main {
     /* background-color: yellow; */
     width: 1280px;
-    height: 215px;
+    height: 216.3px;
     padding-top: 13px;
     display: inline-block;
     text-align: left;
@@ -406,11 +409,149 @@ li {
 
 
 main {
-    background-color: skyblue;
     height: 2367.4px;
     width: 1280px;
-    display: inline-block;
+    display: inline-flex;
     position: relative;
+    text-align: left;
+}
+
+[id^=main] > div {
+    background-color: var(--color_block_bg);
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0, 0, 0, .04);
+}
+
+#main-left {
+    width: 830px;
+    height: 2367.4px;
+    margin-right: 30px;
+    display: inline-block;
+}
+#main-left > div {
+    margin-top: 16px;
+}
+
+#main-left > div:first-of-type {
+    height: 130px;
+    margin-top: 0;
+    background-color: darkblue;
+}
+
+#news {
+    height: 425.8px;
+}
+
+#shopping {
+    height: 559.8px;
+}
+
+#recommendation {
+    height: 1039.6px;
+    margin-bottom: 0;
+}
+
+#main-right {
+    width: 420px;
+    height: 2367.4px;
+    display: inline-block;
+}
+#main-right > div {
+    margin-bottom: 16px;
+}
+
+#login {
+    height: 163.6px;
+    padding: 20.5px 20px 18px 20px
+}
+#login > span {
+    font-size: 1.4rem;
+    line-height: 20px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+#login-button {
+    height: 55px;
+    display: block;
+    margin-top: 13.6px;
+    padding: 17px 0;
+    border: 1px solid rgba(0, 0, 0, .06);
+    border-radius: 4px;
+    background-color: #03c75a;
+    box-shadow: 0 2px 4px 0 rgba(3, 199, 90, .12);
+    color: white;
+    text-align: center;
+    position: relative;
+}
+#login-button:hover {
+    background-color: #17b75e;
+    box-shadow: 0 2px 4px 0 rgba(3, 199, 90, .24);
+}
+#login-button > i {
+    background-image: url(./sp_main.e0b0b60f.png);
+    background-size: 458px 444px;
+    background-position: -142px -270.3px;
+    background-repeat: no-repeat;
+    width: 72px;
+    height: 13.7px;
+    display: inline-block;
+    margin: 3px 51px 0 0;
+}
+#login-button > span {
+    position: absolute;
+    top: 21.5px;
+    right: 127.8px;
+}
+#login > div {
+    margin-top: 16px;
+    width: 100%;
+    text-align: center;
+    line-height: 20px;
+    color: var(--color_caption2);
+    margin-top: 16px;
+    font-size: 1.3rem;
+}
+#login > div > a:nth-child(2)::before {
+    content: "";
+    display: inline-block;
+    width: 1.5px;
+    height: 12px;
+    background-color: var(--color_dot_divider);
+    margin: 4px 12px 0;
+}
+#login > div > a:nth-child(3)::before {
+    content: "";
+    display: inline-block;
+    width: 1.5px;
+    height: 12px;
+    background-color: var(--color_dot_divider);
+    margin: 4px 12px 0;
+}
+
+#main-right > div:nth-of-type(2) {
+    height: 240px;
+}
+
+#weather {
+    height: 235.8px;
+}
+
+#stock {
+    height: 235.8px;
+}
+
+#main-right > div:nth-of-type(5) {
+    height: 80px;
+    background-color: darkblue;
+}
+
+#widget {
+    height: 806px;
+}
+
+#main-right > div:nth-of-type(7) {
+    height: 80px;
 }
 
 footer {
