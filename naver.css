@@ -30,6 +30,10 @@ button {
 }
 a {
     text-decoration: none;
+    color: black;
+}
+a:visited {
+    text-decoration: none;
 }
 li {
     list-style: none;
@@ -511,6 +515,16 @@ main {
     color: var(--color_caption2);
     margin-top: 16px;
     font-size: 1.3rem;
+    position: relative;
+    letter-spacing: -0.4px;
+}
+#login > div > a:first-child {
+    position: relative;
+    left: 5px;
+}
+#login > div > a:last-child {
+    position: relative;
+    right: 5px;
 }
 #login > div > a:nth-child(2)::before {
     content: "";
@@ -533,8 +547,163 @@ main {
     height: 240px;
 }
 
+.right-boards {
+    padding: 0 18px;
+}
+.right-board-header {
+    padding: 6px 0;
+    display: flex;
+    justify-content: flex-start;
+    height: 52px;
+    align-items: center;
+    vertical-align: top;
+}
+.right-board-contents {
+    border-top: 1px solid var(--color_border_in);
+}
+.right-header-title {
+    padding-right: 7px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color_title);
+    line-height: 40px;
+}
+.right-header-title:hover {
+    text-decoration: underline;
+}
+
 #weather {
     height: 235.8px;
+}
+#weather-header-button {
+    min-width: 75px;
+    height: 26px;
+    padding: 0 10px 0 7px;
+    border: 1px solid var(--color_border_in_divider);
+    border-radius: 15px;
+    background-color: var(--color_button1_bg);
+    color: var(--color_caption2);
+    font-size: 1.1rem;
+    line-height: 25px;
+    font-weight: 500;
+    display: flex;
+    /* align-items: baseline; */
+    /* margin-top: 7px; */
+}
+#weather-header-button::before {
+    content: "";
+    display: inline-block;
+    background-image: url(./sp_main.e0b0b60f.png);
+    background-size: 458px 444px;
+    background-position: -163px -411px;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+    margin: 6px 2px 0 0;
+    position: relative;
+    bottom: 0.5px;
+}
+#weather-header-button:hover {
+    background-color: #f8f8f8;
+    color: #404040;
+}
+#weather-header-button:hover::before {
+    background-position: -150px -411px;
+}
+#weather-region {
+    color: var(--color_caption2);
+    font-size: 1.3rem;
+    flex: 1;
+    text-align: right;
+    line-height: 40px;
+}
+#weather-contents {
+    display: flex;
+}
+#weather-contents-left {
+    width: 180px;
+    margin: 20px 0 18px 0;
+    display: inline-block;
+}
+#weather-image {
+    background-image: url(./sp_weather.11654bc0.png);
+    background-size: 641px 587px;
+    background-position: -87px 0px;
+    background-repeat: no-repeat;
+    width: 86px;
+    height: 86px;
+    display: inline-block;
+    margin-right: 4px;
+}
+#climate-now {
+    display: inline-block;
+    min-width: 0;
+    font-size: 3.9rem;
+    line-height: 48px;
+    letter-spacing: -2px;
+    height: 68px;
+}
+#climate-now > span {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 20px;
+    font-weight: bold;
+    letter-spacing: -0.3px;
+    padding-left:5px;
+}
+#weather-climate > div:first-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+}
+#weather-climate > div:nth-of-type(2) {
+    margin-top: 16px;
+    line-height: 16px;
+    text-align: center;
+}
+#climate-lowest {
+    color: #3172e7;
+    margin: -4px;
+}
+#climate-highest {
+    color: #cd3534;
+}
+#climate-highest::before {
+    content: "";
+    width: 1px;
+    height: 11px;
+    background-color: var(--color_dot_divider);
+    margin: 0 5px 0 3px;
+    transform: skewX(-15deg);
+    vertical-align: -1px;
+    display: inline-block;
+}
+#weather-PM {
+    display: block;
+    margin-top: 6px;
+    line-height: 20px;
+    text-align: center;
+}
+#weather-PM > span {
+    font-size: 1.3rem;
+    letter-spacing: ;
+}
+#weather-PM > span:first-of-type {
+    margin-right: -4.5px;
+}
+#weather-PM > span:nth-of-type(2)::before {
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background-color: var(--color_dot_divider);
+    margin: 8px 6px 0;
+    border-radius: 50%;
+    vertical-align: top;
+}
+.PM-state {
+    color: #32a1ff;
 }
 
 #stock {
