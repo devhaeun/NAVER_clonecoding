@@ -151,14 +151,14 @@
                         <div id="weather-contents-left">
                             <a href="#" id="weather-climate">
                                 <div>
-                                    <i id="weather-image"></i>
+                                    <i id="weather-image" class="left-cloudy"></i>
                                     <div id="climate-now">
-                                        27.6°
-                                        <span>맑음</span>
+                                        31.3°
+                                        <span>흐림</span>
                                     </div>
                                 </div>
                                 <div>
-                                    <span id="climate-lowest">24°</span>
+                                    <span id="climate-lowest">23°</span>
                                     <span id="climate-highest">31°</span>
                                 </div>
                             </a>
@@ -168,16 +168,38 @@
                             </a>
                         </div>
                         <div id="weather-contents-right">
-                            <ul>
+                            <ul id="weather-list">
+                                <li>
+                                    <a href="#">
+                                        <div class="climate-thr-time">
+                                            <!-- ::before -->
+                                            31°
+                                        </div>
+                                        <div class="weather-img cloudy">
+                                        </div>
+                                        <div class="weather-time current">16시</div>
+                                    </a>
+                                </li>
                                 <li>
                                     <a href="#">
                                         <div class="climate-thr-time">
                                             <!-- ::before -->
                                             29°
                                         </div>
-                                        <div class="weather-img">
+                                        <div class="weather-img cloudy">
                                         </div>
-                                        <div class="weather-time">20시</div>
+                                        <div class="weather-time">18</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="climate-thr-time">
+                                            <!-- ::before -->
+                                            28°
+                                        </div>
+                                        <div class="weather-img cloudy">
+                                        </div>
+                                        <div class="weather-time">20</div>
                                     </a>
                                 </li>
                                 <li>
@@ -186,7 +208,7 @@
                                             <!-- ::before -->
                                             26°
                                         </div>
-                                        <div class="weather-img">
+                                        <div class="weather-img cloudy">
                                         </div>
                                         <div class="weather-time">22</div>
                                     </a>
@@ -195,40 +217,82 @@
                                     <a href="#">
                                         <div class="climate-thr-time">
                                             <!-- ::before -->
-                                            25°
+                                            26°
                                         </div>
-                                        <div class="weather-img">
+                                        <div class="weather-img cloudy">
                                         </div>
                                         <div class="weather-time">0</div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="climate-thr-time">
-                                            <!-- ::before -->
-                                            25°
-                                        </div>
-                                        <div class="weather-img">
-                                        </div>
-                                        <div class="weather-time">2</div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="climate-thr-time">
-                                            <!-- ::before -->
-                                            24°
-                                        </div>
-                                        <div class="weather-img">
-                                        </div>
-                                        <div class="weather-time">4</div>
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div id="stock"></div>
+                <div id="stock" class="right-boards">
+                    <div class="right-board-header">
+                        <a href="#" class="right-header-title">증시</a>
+                        <button id="stock-info-button"></button>
+                        <span id="stock-date">
+                            <span>07.15. 15:40</span>
+                            <button id="stock-renew"></button>
+                        </span>
+                    </div>
+                    <div class="right-board-contents" id="stock-contents">
+                        <div id="stock-contents-left">
+                            <a href="#">
+                                <div id="stock-name">코스피</div>
+                                <div id="stock-price">2,860.92</div>
+                                <div id="stock-gap" class="red">
+                                    <i class="up"></i>3.92
+                                    <span>+0.14%</span>
+                                </div>
+                                <div id="stock-graph">
+                                    <img src="./KOSPI_naverpc_l.png" width="180" height="72">
+                                </div>
+                            </a>
+                        </div>
+                        <div id="stock-contents-right">
+                            <ul id="stock-menu">
+                                <li>
+                                    <a href="#">
+                                        <span class="stock-menu-name">하이브</span>
+                                        <span>
+                                            <i class="down"></i>
+                                            <span class="blue">0.79%</span>
+                                            188,200
+                                        </span>    
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="stock-menu-name">삼성전자</span>
+                                        <span>
+                                            <i class="up"></i>
+                                            <span class="red">2.73%</span>
+                                            86,700
+                                        </span>    
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="stock-menu-name">HLB</span>
+                                        <span>
+                                            <i class="up"></i>
+                                            <span class="red">0.59%</span>
+                                            85,100
+                                        </span>    
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>인기종목 더보기</span>
+                                        <!-- ::after -->
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 <div class="ad"></div>
                 <div id="widget"></div>
                 <div class="ad"></div>

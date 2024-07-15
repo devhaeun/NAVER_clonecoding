@@ -38,6 +38,9 @@ a:visited {
 li {
     list-style: none;
 }
+.current {
+    font-weight: bold;
+}
 
 :root {
     --color_title: #080808;
@@ -560,6 +563,7 @@ main {
 }
 .right-board-contents {
     border-top: 1px solid var(--color_border_in);
+    display: flex;
 }
 .right-header-title {
     padding-right: 7px;
@@ -573,7 +577,7 @@ main {
 }
 
 #weather {
-    height: 235.8px;
+    height: 235.6px;
 }
 #weather-header-button {
     min-width: 75px;
@@ -617,9 +621,6 @@ main {
     text-align: right;
     line-height: 40px;
 }
-#weather-contents {
-    display: flex;
-}
 #weather-contents-left {
     width: 180px;
     margin: 20px 0 18px 0;
@@ -628,12 +629,14 @@ main {
 #weather-image {
     background-image: url(./sp_weather.11654bc0.png);
     background-size: 641px 587px;
-    background-position: -87px 0px;
     background-repeat: no-repeat;
     width: 86px;
     height: 86px;
     display: inline-block;
     margin-right: 4px;
+}
+.left-cloudy {
+    background-position: 0px -174px;
 }
 #climate-now {
     display: inline-block;
@@ -687,7 +690,7 @@ main {
 }
 #weather-PM > span {
     font-size: 1.3rem;
-    letter-spacing: ;
+    /* letter-spacing: ; */
 }
 #weather-PM > span:first-of-type {
     margin-right: -4.5px;
@@ -705,9 +708,164 @@ main {
 .PM-state {
     color: #32a1ff;
 }
+#weather-contents-right {
+    margin: 20px 0 20.3px;
+    margin-left: 24px;
+}
+#weather-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    height: 100%;
+}
+#weather-list > li {
+    width: 32px;
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+.climate-thr-time {
+    font-size: 14px;
+    line-height: 16px;
+}
+.weather-time {
+    position: absolute;
+    bottom: 0;
+    font-size: 1.3rem;
+    line-height: 16px;
+    width: 100%;
+}
+.weather-img {
+    position: absolute;
+    bottom: 20px;
+}
+.weather-img::before {
+    content: "";
+    display: block;
+    background-image: url(./sp_weather.11654bc0.png);
+    background-size: 641px 587px;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+}
+.cloudy::before {
+    background-position: -198px -522px;
+}
 
 #stock {
     height: 235.8px;
+}
+#stock-info-button {
+    height: 100%;
+    width: 20px;
+    position: relative;
+}
+#stock-info-button::after {
+    content: '';
+    display: inline-block;
+    background-image: url(./sp_main.e0b0b60f.png);
+    background-size: 458px 444px;
+    background-position: -434px -72px;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 13px;
+    left: -1px;
+}
+#stock-date {
+    margin-left: auto;
+    text-align: right;
+    color: var(--color_caption2);
+    font-size: 1.3rem;
+    vertical-align: top;
+    position: relative;
+}
+#stock-date > span {
+    margin-right: 16.5px;
+}
+#stock-renew::after {
+    content: "";
+    display: block;
+    background-image: url(./sp_main.e0b0b60f.png);
+    background-size: 458px 444px;
+    background-position: -134px -388px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: -2px;
+    right: 0;
+}
+#stock-contents-left {
+    width: 179.5px;
+    height: 183px;
+    padding-top: 16px;
+}
+#stock-name {
+    font-size: 15px;
+    line-height: 18px;
+}
+#stock-price {
+    margin-top: 1px;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.7px;
+}
+#stock-gap {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
+}
+.red {
+    color: #f44336;
+}
+.blue {
+    color: #2196f3;
+}
+.up {
+    background-image: url(./sp_main.e0b0b60f.png);
+    background-size: 458px 444px;
+    background-position: -124px -411px;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+    margin-top: 4px;
+    display: inline-block;
+}
+.down {
+    background-image: url(./sp_main.e0b0b60f.png);
+    background-size: 458px 444px;
+    background-position: -378px -388px;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+    margin-top: 5px;
+    display: inline-block;
+}
+#stock-contents-right {
+    flex: 1;
+}
+#stock-menu {
+    margin: 8px 0 15px 25px;
+    display: flex;
+    flex-direction: column;
+}
+#stock-menu > li {
+    /* border-bottom: 1px solid var(--color_border_in); */
+}
+#stock-menu > li > a {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    height: 38px;
+    padding: 8px 0 9px;
+    border-bottom: 1px solid var(--color_border_in);
+}
+#stock-menu > li:first-of-type > a {
+    height: 36px;
+    padding-top: 6px;
 }
 
 #main-right > div:nth-of-type(5) {
