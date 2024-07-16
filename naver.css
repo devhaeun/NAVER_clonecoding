@@ -170,7 +170,7 @@ li {
 }
 
 #naverpay-icon {
-    left: 13.5px;
+    left: 12.5px;
 }
 #naverpay-icon > div {
     background-position: -326px -33px;
@@ -445,8 +445,75 @@ main {
     background-color: darkblue;
 }
 
+.left-board-container {
+    padding: 0 20px;
+}
+.left-board-header {
+    width: 790px;
+    height: 58px;
+    padding: 18px 0 17px 0;
+}
+.left-board-header > ul {
+    list-style: none;
+}
+.left-board-header > ul > li {
+    float: left;
+}
+.left-board-header > ul > li > button {
+    font-size: 1.6rem;
+    line-height: 23px;
+    font-weight: 800;
+    color: rgba(8, 8, 8, .5);
+}
+.left-board-header > ul > li:first-child > button {
+    color: var(--color_title);
+}
+.left-board-footer {
+    border-top: 1px solid var(--color_border_in);
+    padding: 10px 0 11px;
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 35px;
+    font-weight: 600;
+}
+
 #news {
-    height: 425.8px;
+    height: 425.4px;
+}
+#news-shortbox {
+    background-color: var(--color_option_bg);
+    padding: 12px 20px;
+    display: flex;
+    line-height: 26px;
+}
+#news-shortbox--news-home {
+    flex: 1;
+    text-align: right;
+}
+#news-grid-container {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    width: 100%;
+    height: 224px;
+    text-align: center;
+    align-items: center;
+    margin: 18px 0;
+    border: 1px solid var(--color_border_in);
+    border-radius: 4px;
+    background-color: var(--color_border_in);
+    gap: 1px;
+}
+#news-grid-container > div {
+    background-color: white;
+    height: 100%;
+    padding: 18px 0;
+}
+#news-footer > span:first-of-type {
+    color: var(--color_news);
+}
+#news-footer > span:last-of-type {
+    color: rgba(96, 96, 96, .5);
 }
 
 #shopping {
@@ -852,9 +919,6 @@ main {
     display: flex;
     flex-direction: column;
 }
-#stock-menu > li {
-    /* border-bottom: 1px solid var(--color_border_in); */
-}
 #stock-menu > li > a {
     display: flex;
     align-items: baseline;
@@ -875,6 +939,28 @@ main {
 
 #widget {
     height: 806px;
+    background-color: var(--color_board_bg);
+    padding: 15px 18px 20px;
+}
+#widget--title {
+    color: var(--color_title);
+    padding-bottom: 1px;
+    font-size: 1.5rem;
+    line-height: 24px;
+    font-weight: 800;
+}
+#widget--contents > div {
+    margin-top: 12px;
+    display: inline-block;
+    width: 182px;
+    height: 192px;
+    background-color: var(--color_menu_widget_bg);
+    box-shadow: 0 0 0 1px #ebebeb, 0 1px 2px 0 rgba(0, 0, 0, .04);
+    border-radius: 8px;
+}
+#widget--contents-vibe {
+    width: 384px;
+    height: 278px;
 }
 
 #main-right > div:nth-of-type(7) {
