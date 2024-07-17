@@ -517,7 +517,7 @@ main {
 }
 
 #shopping {
-    height: 559.8px;
+    height: 560.4px;
 }
 
 #recommendation {
@@ -884,6 +884,8 @@ main {
     font-size: 14px;
     line-height: 17px;
     font-weight: 500;
+    margin-top: -1px;
+    letter-spacing: -0.6px;
 }
 .red {
     color: #f44336;
@@ -919,17 +921,50 @@ main {
     display: flex;
     flex-direction: column;
 }
+#stock-menu > li {
+    border-bottom: 1px solid var(--color_border_in);
+}
 #stock-menu > li > a {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+    align-items: baseline;
     height: 38px;
-    padding: 8px 0 9px;
-    border-bottom: 1px solid var(--color_border_in);
+    padding: 8.5px 0 9px;
+    position: relative;
+}
+#stock-menu > li > a:hover {
+    text-decoration: underline;
 }
 #stock-menu > li:first-of-type > a {
     height: 36px;
     padding-top: 6px;
+}
+#stock-menu > li:last-of-type > a > span {
+    position: absolute;
+    bottom: 14px;
+    color: var(--color_caption2);
+}
+#stock-menu > li:last-of-type > a::after {
+    content: '';
+    background-image: url(./sp_main.e0b0b60f.png);
+    background-size: 458px 444px;
+    background-position: -122px -432px;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 12px;
+    position: absolute;
+    right: 0px;
+    bottom: 13px;
+}
+.stock-menu-gap > span {
+    font-size: 1.1rem;
+    line-height: 21px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+    margin-right: -1.4px;
+    margin-left: -4px;
 }
 
 #main-right > div:nth-of-type(5) {
@@ -958,9 +993,43 @@ main {
     box-shadow: 0 0 0 1px #ebebeb, 0 1px 2px 0 rgba(0, 0, 0, .04);
     border-radius: 8px;
 }
-#widget--contents-vibe {
+#widget--contents > div:last-of-type {
     width: 384px;
     height: 278px;
+}
+#widget--open-mobile {
+    padding: 21px 0 17px;
+    display: block;
+    position: relative;
+}
+#widget--open-mobile > span {
+    display: inline-block;
+    margin-top: 7px;
+}
+#widget--open-mobile > span::before {
+    content: '';
+    display: inline-block;
+    background-image: url(./sp_main.e0b0b60f.png);
+    background-size: 458px 444px;
+    background-position: -388px -198px;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 22px;
+    margin: -5px 6.5px 0 3px;
+    vertical-align: top;
+}
+#widget--open-mobile::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 28px;
+    right: 4px;
+    background-image: url(./sp_main.e0b0b60f.png);
+    background-size: 458px 444px;
+    background-position: -450px -13px;
+    background-repeat: no-repeat;
+    width: 8px;
+    height: 12px;
 }
 
 #main-right > div:nth-of-type(7) {
