@@ -1187,6 +1187,10 @@ main {
     line-height: 24px;
     font-weight: 800;
 }
+#widget--contents {
+    display: flex;
+    flex-wrap: wrap;
+}
 #widget--contents > div {
     margin-top: 12px;
     display: inline-block;
@@ -1197,7 +1201,7 @@ main {
     border-radius: 8px;
 }
 #widget--contents > div:nth-child(2n) {
-    margin-left: 7.2px;
+    margin-left: 12px;
 }
 #widget--contents > div:last-of-type {
     width: 384px;
